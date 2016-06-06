@@ -1,0 +1,54 @@
+<link rel="stylesheet" type="text/css" href="stylesheets/app/mergeGroups.css">
+<link rel="stylesheet" type="text/css" href="stylesheets/bootstrap/css/bootstrap.min.css" media="screen">
+<link rel="stylesheet" type="text/css" href="stylesheets/app/global.css" media="screen">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="javascripts/libraries/bootstrap.min.js"></script>
+<script src="javascripts/libraries/lodash.js"></script>
+<script src="javascripts/libraries/q.js"></script>
+<script src="javascripts/libraries/mustache.js"></script>
+<script src="javascripts/libraries/chosen.jquery.koen.js"></script>
+<link rel="stylesheet" type="text/css" href="stylesheets/app/chosen.css">
+<script src="javascripts/app/mergeGroups.js"></script>
+<script type="text/javascript" charset="utf-8" src="javascripts/helper/messageViewHandler.js"></script>
+<script type="text/javascript" charset="utf-8" src="javascripts/helper/jivePromises.js"></script>
+<div id = "main-wrapper">
+    <div id="currentGroup">
+    <p></p>
+    </div>
+    <div class="tile-wrapper import-feature">
+        <br>
+        <p class="block-group">
+            <strong>Which group(s) do you want to merge?</strong>
+        </p>
+        <p class="block-group">
+            <a href="#" class="primary-btn btn btn-primary">Select Source Group(s)</a>
+        </p>
+
+        <ul>
+
+        </ul><br>
+        <div class="info"><strong>You can add 10 groups to this merge.</strong></div>
+        <div class="selected-streams">
+            <p class="block-group">
+                <strong>Which streams do you want to add users to ?</strong><br>
+                (select at least one)
+            </p>
+            <label>
+                <input type="checkbox" name="streams" value="connections" checked>
+                Connections
+            </label>
+            <label>
+            <input type="checkbox" name="streams" value="Email Watches">
+                Email Watches
+            </label><br>
+        </div>
+        <div class="group">
+            <a href="#" class="secondary-btn">Submit Request</a>
+            <a href="#" class="cancel-btn">Cancel</a>
+        </div>
+    </div>
+    <span id="app-message"></span>
+</div>
+<script id="message-template" type="x-tmpl-mustache">
+    <label id='move-content-message' class='alert {{messageClass}}'>{{message}}</label>
+</script>

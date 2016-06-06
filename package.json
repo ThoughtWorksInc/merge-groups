@@ -1,0 +1,30 @@
+{
+    "name": "",
+    "version": "0.0.1",
+    "private": true,
+    "scripts": {
+        "start": "node app.js",
+        "test":"mocha"
+    },
+    "dependencies": {
+        "express": "3.1.0",
+        "jive-sdk":"*",
+        "mustache": "0.7.2",
+        "q": "1.1.2",
+        "lodash":"*",
+        "jive-api-client": "git+https://github.com/shilpakondawar/jive-api-client.git",
+        "multipart-parser" : "0.0.2",
+        "q-io":     "1.6.x",
+        "request": "2.27.0",
+        "xml2js": "0.2.8",
+        "winston": "~0.7.1",
+        "xoauth2":"*",
+        "ejs":"2.2.3",
+        "ramda" : "0.15.x",
+        "string": "~3.0.1"
+    },
+    "devDependencies": {
+        "mocha": "*",
+        "chai": "*"
+    }
+}

@@ -1,0 +1,27 @@
+<html>
+<div> Hi,
+    <br/>
+    There were some errors merging all the selected groups to the group <a href="<%=groupUrl %>">"<%= groupName %>"</a>. Please try again.
+    <br/>
+
+    <%if (failedIDs.members.length > 0) { %>
+        The following groups’ members were not imported successfully
+    <br/>
+        <% failedIDs.members.forEach(function(name){ %>
+             <li><a href="<%=name.groupUrl %>"><%= name.groupName %></a></li>
+         <% }) %>
+    <% } %>
+
+    <%if (failedIDs.content.length > 0) { %>
+        The following groups’ content could not be moved successfully
+        <br/>
+        <% failedIDs.content.forEach(function(name){ %>
+             <li><a href="<%=name.groupUrl %>"><%= name.groupName %></a></li>
+        <% }) %>
+    <% } %>
+
+    <br/>
+    As part of the merge operation, the group <a href="<%=groupUrl %>">"<%= groupName %>"</a> has all the content type enabled. If you wish to disable any particular content type please go to Manage > Settings > Group Features and Activity Setting
+
+</div>
+</html>

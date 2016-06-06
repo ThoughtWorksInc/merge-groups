@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module specificationVersion="1">
+    <ModulePrefs title=""
+                 description="Merge groups custom jive-sdk app developed by Thoughtworks"
+                 author="Manali Thorat"
+                 author_affiliation="Thoughtworks"
+                 author_email="manalit@thoughtworks.com">
+
+        <!-- Commonly used features -->
+        <Require feature="dynamic-height"/>
+        <Require feature="embedded-experiences"/>
+        <Require feature="jive-core-v2" />
+        <Require feature="jive-core-v3"/>
+        <Require feature="minimessage"/>
+        <Require feature="setprefs"/>
+        <Require feature="osapi"/>
+        <Require feature="views"/>
+        <Require feature="jive-connects-v1">
+            <Param name="alias:mergeService|title:mergeService">jive:service://mergeService</Param>
+        </Require>
+        <Require feature="actions">
+            <Param name="action-contributions">
+                <![CDATA[
+                <action id="org.jivesoftware.mergegroups"
+						path="jive/actions/places/group"
+						label="Merge Groups"
+						view="merge-groups"
+						icon="images/mergeGroups.png"
+				/>
+                <action id="com.jivesoftware.launcherlessapp"
+                  path="jive/apps/launcher?filter=false()"/>
+
+				]]>
+            </Param>
+        </Require>
+
+        <Link rel="Icon"       href="images/mergeGroups.png" />
+        <Link rel="MediumIcon" href="images/mergeGroups.png" />
+        <Link rel="LargeIcon"  href="images/mergeGroup.png" />
+
+        <Optional feature="content-rewrite">
+            <Param name="include-url">*</Param>
+            <Param name="exclude-url"></Param>
+        </Optional>
+
+    </ModulePrefs>
+    <Content type="html" view="merge-groups" href="merge-groups.html" preferred_height="400" preferred_width="500"  />
+
+</Module>
