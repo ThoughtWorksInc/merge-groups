@@ -12,7 +12,7 @@ function sendGMail(message, done) {
             return done(err);
         }
         var smtpMessage = [
-            "From:" + env.google.userName,
+            "From:" + env.mailInfo.userName,
             "To: " + message.to.join(','),
             "Content-type: " + (message.contentType || 'text/plain;charset=utf8'),
             "MIME-Version: 1.0"

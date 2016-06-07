@@ -157,7 +157,7 @@ var sendMessage = function (mailInfo,template,failedIDs) {
             else
                 messageBody = ejs.render(data,{groupName : mailInfo.targetGroupName,groupUrl : mailInfo.groupUrl});
             var message = {
-                to: [mailInfo.currentUserName + '@' + env.domainName],
+                to: [mailInfo.currentUserName + '@' + env.mailInfo.domainName],
                 headers: {
                     Subject: mailInfo.subject
                 },

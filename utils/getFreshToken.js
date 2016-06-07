@@ -10,10 +10,10 @@ var xoauth2gen;
 function getFreshToken(done) {
 
     xoauth2gen = xoauth2.createXOAuth2Generator({
-        user: env.google.user,
-        clientId: env.google.clientId,
-        clientSecret: env.google.clientSecret,
-        refreshToken: env.google.refreshToken
+        user: env.mailInfo.user,
+        clientId: env.mailInfo.clientId,
+        clientSecret: env.mailInfo.clientSecret,
+        refreshToken: env.mailInfo.refreshToken
     });
 
    xoauth2gen.getToken(function(err, token, accessToken){
