@@ -25,6 +25,16 @@ example of jiveclientconfiguration:
     }
 }
 
+You also have to add some field values in env.json which are required for sending mail.
+ "mailInfo":{
+    "user" : "",
+    "userName" : "",
+    "domainName" : "",
+    "refreshToken" : "",
+    "clientId" : "",
+    "clientSecret" : ""
+  }
+
 How to Use the app:
 1) Select group(s) you want to merge(You can select maximum 10 groups at a time).
 2) Select streams you want to add users to.
