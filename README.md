@@ -3,7 +3,7 @@ Merge Groups App is a jive app developed using node.js and jive-sdk for merging 
 
 Getting started with Jive node sdk Please refer Jive's official document at https://community.jivesoftware.com/docs/DOC-114053
 
-How to use Import Members app : 
+How to use Merge Groups app : 
 ###### 1)Pull the code. 
 ###### 2)Run command "npm update".
 ###### 3)Put node.js service url in jiveclientconfiguration.json. 
